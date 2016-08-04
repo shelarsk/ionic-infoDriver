@@ -1,0 +1,18 @@
+<ion-view view-title="Submission">
+<ion-content>
+    <ion-list>
+      <ion-item ng-repeat="item in items">
+        <a class="item item-thumbnail-left" href="#/app/collect">
+      <img src="img/ionic.png">
+      <h2>{{item.title}}</h2>
+      <p>{{item.startDate}} </p> 
+    <p>{{item.endDate}} </p> 
+            <p>{{item.summary}} </p> 
+            <p>{{item.contact}} </p> 
+            <p>{{item.requestedBy}} </p> 
+    </a>
+        </ion-item>
+    </ion-list>
+  </ion-content>
+	
+</ion-view>

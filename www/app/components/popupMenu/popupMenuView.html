@@ -1,0 +1,27 @@
+<ion-popover-view > 
+    <ion-content>
+		 <ion-list>
+			<ion-item menu-close class="item item-stable item-icon-left" ng-click="closePopover()" href="#/app/home">
+				<i class="icon ion-ios-person"></i>
+				My Account 
+			</ion-item>
+             <ion-item menu-close class="item item-stable item-icon-left"  ng-click="closePopover()" href="#/app/home">
+				<i class="icon ion-ios-settings-strong"></i>
+				Settings
+			</ion-item>
+            <ion-item menu-close class="item item-stable item-icon-left"  href="#/app/home">
+				 <i class="icon ion-ios-paper"></i>
+				 About Us
+			</ion-item>
+            <ion-item menu-close class="item item-stable item-icon-left" ng-click="closePopover()" href="#/app/help">
+				<i class="icon ion-ios-telephone"></i> <!-- ion-help-circled -->
+				Help Centre
+			</ion-item>
+			<ion-item  menu-close class="item item-stable item-icon-left" ng-click="logout()">
+				<i class="icon ion-log-out"></i>
+				Sign out
+			</ion-item>
+			
+		</ion-list>
+	</ion-content>
+</ion-popover-view>

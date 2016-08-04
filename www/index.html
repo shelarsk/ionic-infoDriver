@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; img-src 'self' data: blob: ; style-src 'self' 'unsafe-inline' blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' * ; font-src 'self' blob:;">
+      
+      
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+<!--	<script src="lib/angular-sanitize/angular-sanitize.min.js"></script>-->
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <script src="lib/ngstorage/ngStorage.min.js"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+
+
+      
+   
+      
+      
+    <!-- your app's js -->
+    <script src="app/app.module.js"></script>
+	<script src="app/app.routes.js"></script>
+    
+      
+       <script src="lib/d3/d3.min.js"></script>  
+	<script src="lib/nvd/nv.d3.min.js"></script>  
+	<script src="lib/nvd/angular-nvd3.min.js"></script>  
+	
+	<link rel="stylesheet" href="lib/nvd/nv.d3.min.css"> 
+    
+   
+      
+	<script src="app/components/home/homeController.js"></script>
+	<script src="app/components/login/loginController.js"></script>
+	<script src="app/components/menu/menuController.js"></script>
+
+	<script src="app/components/popupMenu/popupMenuController.js"></script>
+    <script src="app/components/help/helpController.js"></script>
+	<script src="app/components/about/aboutController.js"></script>
+
+<!--	<script src="app/components/country/countryControllers.js"></script>-->
+
+    <script src="app/components/dash/dashController.js"></script>
+     <script src="app/components/graph/graphController.js"></script>
+      <script src="app/components/submit/submitController.js"></script>
+     <script src="app/components/collect/collectController.js"></script>
+      <script src="app/components/notification/notificationController.js"></script>
+
+   	<script src="app/components/register/registerController.js"></script>
+	
+<!--   <script src="app/components/common/commonService.js"></script> -->
+   <script src="app/components/data/dataService.js"></script> 
+      
+ 
+  </head>
+
+  <body ng-app="starter">
+	<ion-nav-view>
+	</ion-nav-view>
+  </body>
+</html>

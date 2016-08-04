@@ -1,0 +1,157 @@
+<ion-view view-title="Home">
+ 
+    
+      <style>
+          .homeButton {
+              height: 200px;
+              display: flex;
+              justify-content: center; /* align horizontal */
+              align-items: center; /* align vertical */  
+          }
+          
+           .homeButtonSmall {
+              height: 100px;
+              display: flex;
+              justify-content: center; /* align horizontal */
+              align-items: center; /* align vertical */  
+          }
+          
+          
+          .homeButtonBig {
+              height: 400px;
+              display: flex;
+              justify-content: center; /* align horizontal */
+              align-items: center; /* align vertical */
+   
+          }
+          
+          #home {
+              
+              padding:0px !important ;
+              font-size: 18px;
+              color: white;
+          }
+          
+          #home div {
+            padding:1px  ;
+          }
+          
+          #home img {
+              width:40px;
+              height:40px;
+          }
+          .homeButtonBig {
+              height: 400px;
+              display: flex;
+              justify-content: center; /* align horizontal */
+              align-items: center; /* align vertical */
+               color: white;
+   
+          }
+          
+          .homelogo {
+              height: 100px;
+              display: flex;
+              justify-content: center; /* align horizontal */
+              align-items: center; /* align vertical */  
+              color: white;
+   
+          }
+          
+          .one {
+              background:#5a606f;
+              text-align: center !important;
+          }
+          
+          .two {
+              background:#bbd534;
+          }
+          
+          .three {
+              background:#28c7f5;
+          }
+          
+          .four {
+              background:#df8839;
+          }
+          .five {
+              background:#ffd119;
+          }
+      
+          .six {
+              background:#4b8bf6;
+          }
+      
+          .seven {
+              background:#47d26f;
+          }
+      
+          .eight {
+              background:#5a606f;
+          }
+      
+          .nine {
+              background:#4b8bf6;
+          }
+          
+           .ten {
+              background:#bbd534;
+          }
+      
+           .eleven {
+              background: #ef473a;
+          }
+      
+      
+      </style>
+    
+<!--
+     <div class="item item-divider item-dark text-center has-header" style="background-color:#ef473a">
+           Dashbaord
+     </div> 
+-->
+      
+     <div  class="content scroll-content ionic-scroll overflow-scroll" id="home"  ng-if="listView==false"  scroll="true"> 
+         
+   
+         
+         
+      <div class="row text-center">
+           <div class="col col-66">
+          <div class="row row-center" on-tap="showList(0)">
+              <div class="col col-center homeButton one" on-tap="showNotification()" > <i class="icon ion-android-notifications"></i> &nbsp;&nbsp; Notifications </div>
+              </div>
+              <div class="row row-center">
+                  <div class="col homeButton two" on-tap="showCollect()"><i class="icon ion-ios-flag"></i> &nbsp;&nbsp;Submission</div>
+                  <div class="col homeButton three" on-tap="showReport()"> <i class="icon ion-calendar "> </i> &nbsp; &nbsp;Reports</div>
+              </div>
+          </div>
+          <div class="col col-33 col-center four homeButtonBig text-wrap" on-tap="showGraph()"> <i class="icon ion-pie-graph"> </i> &nbsp; Graphs </div>
+      </div>
+                   <div class="row text-center">
+              <div class="col homeButtonSmall five" on-tap="showDashboard()"> <i class="icon ion-grid"> </i> &nbsp;&nbsp; Dashboard</div>
+         </div>
+    
+         <div class="row text-center">
+              <div class="col homeButtonSmall seven" on-tap="showHelp()">  <i class="icon ion-help-circled"> </i> &nbsp;&nbsp; Help</div>
+         </div>
+         
+
+      
+      <ion-list>
+      <ion-item ng-repeat="playlist in playlists" href="#/app/home/{{playlist.id}}">
+        {{playlist.title}}
+      </ion-item>
+    </ion-list>
+     </div>
+    
+    <div class="scroll-content ionic-scroll  overflow-scroll  content   has-subheader"  ng-if="listView==true" >
+       <ion-list>
+        <ion-item   ng-repeat="item in items"
+                    href="#/app/showBooks/:{{group.key}}/:{{item.key}}/:{{item.subName}}" 
+					ng-click="getBooklist(group,item)">
+				{{item.subName}}
+			</ion-item>
+       </ion-list>
+    </div>
+</ion-view>

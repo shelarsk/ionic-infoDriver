@@ -1,0 +1,94 @@
+
+<ion-view view-title="Login" name="login-view" hide-nav-bar="true">
+    
+ 
+  <ion-content  style="background: url('img/bg.jpg');" class="padding">
+      <div class="item item-divider item-balanced text-center padding">
+		InfoDriver App
+	  </div>
+   <style>
+  
+  .iconsetup  {
+		height: 45px;
+		width: 45px;
+  }
+  
+   .logosetup  {
+/*
+		height: 100px;
+		width: 100px;
+*/
+  }
+  
+   .pslogosetup  {
+		height: 90px;
+		width: 235px;
+  }
+  
+    .iconsetup1  {
+		height: 45px;
+		width: 55px;
+  } 
+ </style>
+       <div class = "row">
+<div class = "col text-center"><a><img src="img/logo/logo.png" class="logosetup"> </a> </div>
+</div>
+      
+  <div class="item item-divider item-balanced text-center padding">
+     Login To Member Area
+  </div>
+      
+      
+    <form name="myForm" novalidate>
+        <div ng-controller="LoginCtrl">
+            <div class="list list-inset padding">
+            <label class="item item-input">               
+                <input type="text" placeholder="Enter your Registered Email  " name="email" ng-model="data.email" ng-minlength="5" required>
+            </label> <br>
+            <label class="item item-input " >
+                <input name="password" ng-model="data.password" type="password" placeholder="password" required />
+            </label>
+                
+			<div class="padding">
+                <a class="button button-clear button-positive"  href="http://www.localhost.com/forgotPass.do" onclick="window.open(this.href, '_blank')">
+                    Forgot Password?
+                </a>
+            </div>	
+            </div>
+            
+            
+            <div class="padding">
+                <button ng-click="login(data.email,data.password)"ng-disabled="myForm.$invalid"  class="button button-block button-balanced">
+                    Sign In
+                </button>
+            </div>
+			
+			<div class="padding">
+                <button class="button button-block button-energized" href="#/app/register" ng-click="goToRegister()">
+                    New User? Sign Up
+                </button>
+            </div>
+            
+            
+        </div>
+
+        <div class="padding">
+	
+           <p ng-show="myForm.email.$error.required">* Email is required</p>
+            <p ng-show="myForm.email.$invalid && !myForm.username.$pristine">* Email must be an email address</p>
+            <p ng-show="myForm.email.$error.minlength">* Email must be longer than 5 characters</p>
+            <p ng-show="myForm.password.$error.required">* Password is required</p>
+           
+        </div>
+        
+    </form>
+      
+     
+   
+            
+        
+
+              
+              
+  </ion-content>
+</ion-view>

@@ -1,0 +1,18 @@
+
+<ion-view view-title="Country List" ng-controller="CountryListCtrl">
+<ion-content>
+		<ion-list>
+			<ion-item class="item" ng-repeat="country in countries">
+				<a href="#/app/countyDetail/{{country.id}}">{{country.name}}</a>
+			</ion-item>
+		</ion-list>
+</ion-content>
+
+
+
+<!--
+<ul>
+  <li ng-repeat="country in countries">{{country.name}}
+  </li>
+<ul>-->
+</ion-view>

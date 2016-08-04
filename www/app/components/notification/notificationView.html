@@ -1,0 +1,39 @@
+<ion-view view-title="InfoReader">
+    <div class="bar bar-subheader bar-light">
+  <h1 class="title">Notification</h1>
+</div>
+  
+  <div class="scroll-content ionic-scroll  overflow-scroll  content   has-subheader"  ng-if="listView==false" >
+  
+      
+       <ion-list>
+      <ion-item ng-repeat="item in items" >
+        <div class="item item-thumbnail-left">
+      <img src="img/ionic.png">
+      <h2>{{item.title}} </h2>
+      <p>{{item.summary}} </p>
+    <p>{{item.detail}} </p>         
+            <button class="button button-dark button-small button-light" ng-click="showList('{{item.id}}')" >Check Details Now</button> 
+            
+    </div>
+        </ion-item>
+    </ion-list>
+      
+
+	
+  </div>
+    
+    <div class="scroll-content ionic-scroll  overflow-scroll  content   has-subheader"  ng-if="listView==true" >
+       <ion-list>
+        <ion-item >
+			<p>	Notifcation: {{itemDetails.name}} </p>
+              <p>  Summary: {{itemDetails.url}} </p>
+               <p> Details: {{itemDetails.detail}} </p>
+            
+            <button class="button button-dark button-small button-light" ng-click="showListBack()" >Back to Notifications</button> 
+           
+			</ion-item>
+       </ion-list>
+    </div>
+    
+</ion-view>
